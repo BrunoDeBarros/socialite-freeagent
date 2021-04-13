@@ -44,9 +44,13 @@ You should now be able to use the provider like you would regularly use Socialit
 ### Returned User fields
 
 - `id`
+- `name`
+- `subdomain`
+- All other fields from [OAuth User Docs](https://dev.freeagent.com/docs/company)
 
 
 ### Reference
 
 - [FreeAgent Developers](https://dev.freeagent.com);
 - [OAuth authorization Docs](https://dev.freeagent.com/docs/quick_start);
+- [OAuth User Docs](https://dev.freeagent.com/docs/company)
