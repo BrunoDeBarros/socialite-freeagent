@@ -1,0 +1,21 @@
+{
+    "name": "socialiteproviders/freeagent",
+    "description": "FreeAgent OAuth2 Provider for Laravel Socialite",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bruno Moreira De Barros",
+            "email": "bruno@terraduo.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2 || ^8.0",
+        "socialiteproviders/manager": "^4.0",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "SocialiteProviders\\FreeAgent\\": ""
+        }
+    }
+}
