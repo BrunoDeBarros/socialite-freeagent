@@ -22,7 +22,7 @@ class Provider extends AbstractProvider
      */
     protected function getAuthUrl($state)
     {
-        return $this->buildAuthUrlFromBase('https://api.sandbox.freeagent.com/v2/approve_app', $state);
+        return $this->buildAuthUrlFromBase('https://api.freeagent.com/v2/approve_app', $state);
     }
 
     /**
@@ -30,7 +30,7 @@ class Provider extends AbstractProvider
      */
     protected function getTokenUrl()
     {
-        return 'https://api.sandbox.freeagent.com/v2/token_endpoint';
+        return 'https://api.freeagent.com/v2/token_endpoint';
     }
 
     /**
@@ -38,7 +38,7 @@ class Provider extends AbstractProvider
      */
     protected function getUserByToken($token)
     {
-        $response = $this->getHttpClient()->get('https://api.sandbox.freeagent.com/v2/company', [
+        $response = $this->getHttpClient()->get('https://api.freeagent.com/v2/company', [
             'headers' => [
                 'Authorization' => 'Bearer ' . $token,
             ],
