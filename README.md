@@ -45,8 +45,6 @@ You should now be able to use the provider like you would regularly use Socialit
 
 - `id`
 - `name`
-- `subdomain`
-- All other fields from [OAuth User Docs](https://dev.freeagent.com/docs/company)
 
 
 ### Reference
