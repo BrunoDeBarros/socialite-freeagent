@@ -13,6 +13,11 @@ class Provider extends AbstractProvider
     public const IDENTIFIER = 'FREEAGENT';
 
     /**
+     * The API's Base URL.
+     */
+    public const API_URL = 'https://api.freeagent.com/v2';
+
+    /**
      * {@inheritdoc}
      */
     protected $scopes = [''];
@@ -22,7 +27,7 @@ class Provider extends AbstractProvider
      */
     protected function getAuthUrl($state)
     {
-        return $this->buildAuthUrlFromBase('https://api.freeagent.com/v2/approve_app', $state);
+        return $this->buildAuthUrlFromBase(static::API_URL . '/approve_app', $state);
     }
 
     /**
@@ -30,7 +35,7 @@ class Provider extends AbstractProvider
      */
     protected function getTokenUrl()
     {
-        return 'https://api.freeagent.com/v2/token_endpoint';
+        return static::API_URL . '/token_endpoint';
     }
 
     /**
@@ -38,7 +43,7 @@ class Provider extends AbstractProvider
      */
     protected function getUserByToken($token)
     {
-        $response = $this->getHttpClient()->get('https://api.freeagent.com/v2/company', [
+        $response = $this->getHttpClient()->get(static::API_URL . '/company', [
             'headers' => [
                 'Authorization' => 'Bearer ' . $token,
             ],
